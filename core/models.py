@@ -328,17 +328,17 @@ class RoomMap(ModelBase):
         verbose_name_plural = 'Room Maps'
 
 
-var = {
-    [
-        [0, 0, 2, 0, 0, 1, 0,2, 0, 0],
-        [0, 0, 2, 0, 0, 0, 0,2, 0, 0],
-        [0, 0, 2, 0, 0, 0, 0,2, 0, 0],
-        [0, 0, 2, 0, 0, 0, 0,2, 0, 0]
-    ]
-}
-vago = 0
-ocupado =1
-vazio =2
-disabilitado = 3
-pcd_vago = 4
-pcd_ocupado = 5
+# var = {
+#     [
+#         [0, 0, 2, 0, 0, 1, 0,2, 0, 0],
+#         [0, 0, 2, 0, 0, 0, 0,2, 0, 0],
+#         [0, 0, 2, 0, 0, 0, 0,2, 0, 0],
+#         [0, 0, 2, 0, 0, 0, 0,2, 0, 0]
+#     ]
+# }
+# vago = 0
+# ocupado =1
+# vazio =2
+# disabilitado = 3
+# pcd_vago = 4
+# pcd_ocupado = 5
