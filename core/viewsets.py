@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from core import models, serializers
 from rest_framework.permissions import IsAuthenticated
+import filters
 
 
 class CustomerViewSet(viewsets.ModelViewSet):
