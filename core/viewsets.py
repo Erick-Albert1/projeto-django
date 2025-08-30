@@ -1,7 +1,8 @@
 from rest_framework import viewsets
 from core import models, serializers
 from rest_framework.permissions import IsAuthenticated
-import filters
+from . import filters
+import django_filters
 
 
 class CustomerViewSet(viewsets.ModelViewSet):
@@ -12,74 +13,74 @@ class CustomerViewSet(viewsets.ModelViewSet):
 
 
 class PaymentMethodViewSet(viewsets.ModelViewSet):
-    queryset = models.PaymentMethodViewSet.objects.all()
-    serializer_class = serializers.PaymentMethodViewSetSerializer
-    filterset_class = filters.PaymentMethodViewSetFilter
+    queryset = models.PaymentMethod.objects.all()
+    serializer_class = serializers.PaymentMethodSerializer
+    filterset_class = filters.PaymentMethodFilter
     permission_classes = [IsAuthenticated]
 
 
 
 class GenreViewSet(viewsets.ModelViewSet):
-    queryset = models.GenreViewSet.objects.all()
-    serializer_class = serializers.GenreViewSetSerializer
-    filterset_class = filters.GenreViewSetFilter
+    queryset = models.Genre.objects.all()
+    serializer_class = serializers.GenreSerializer
+    filterset_class = filters.GenreFilter
     permission_classes = [IsAuthenticated]
 
 
 
 class MovieViewSet(viewsets.ModelViewSet):
-    queryset = models.MovieViewSet.objects.all()
-    serializer_class = serializers.MovieViewSetSerializer
-    filterset_class = filters.MovieViewSetFilter
+    queryset = models.Movie.objects.all()
+    serializer_class = serializers.MovieSerializer
+    filterset_class = filters.MovieFilter
     permission_classes = [IsAuthenticated]
 
 
 class MovieGenreViewSet(viewsets.ModelViewSet):
-    queryset = models.MovieGenreViewSet.objects.all()
-    serializer_class = serializers.MovieGenreViewSetSerializer
-    filterset_class = filters.MovieGenreViewSetFilter
+    queryset = models.MovieGenre.objects.all()
+    serializer_class = serializers.MovieGenreSerializer
+    filterset_class = filters.MovieGenreFilter
     permission_classes = [IsAuthenticated]
 
 
 
 class RoomViewSet(viewsets.ModelViewSet):
-    queryset = models.RoomViewSet.objects.all()
-    serializer_class = serializers.RoomViewSetSerializer
-    filterset_class = filters.RoomViewSetFilter
+    queryset = models.Room.objects.all()
+    serializer_class = serializers.RoomSerializer
+    filterset_class = filters.RoomFilter
     permission_classes = [IsAuthenticated]
 
 
 class RoomMapViewSet(viewsets.ModelViewSet):
-    queryset = models.RoomMapViewSet.objects.all()
-    serializer_class = serializers.RoomMapViewSetSerializer
-    filterset_class = filters.RoomMapViewSetFilter
+    queryset = models.RoomMap.objects.all()
+    serializer_class = serializers.RoomMapSerializer
+    filterset_class = filters.RoomMapFilter
     permission_classes = [IsAuthenticated]
 
 
 
 class SessionViewSet(viewsets.ModelViewSet):
-    queryset = models.SessionViewSet.objects.all()
-    serializer_class = serializers.SessionViewSetSerializer
-    filterset_class = filters.SessionViewSetFilter
+    queryset = models.Session.objects.all()
+    serializer_class = serializers.SessionSerializer
+    filterset_class = filters.SessionFilter
     permission_classes = [IsAuthenticated]
 
 
 class PurchaseViewSet(viewsets.ModelViewSet):
-    queryset = models.PurchaseViewSet.objects.all()
-    serializer_class = serializers.PurchaseViewSetSerializer
-    filterset_class = filters.PurchaseViewSetFilter
+    queryset = models.Purchase.objects.all()
+    serializer_class = serializers.PurchaseSerializer
+    filterset_class = filters.PurchaseFilter
     permission_classes = [IsAuthenticated]
 
 
 class TicketViewSet(viewsets.ModelViewSet):
-    queryset = models.TicketViewSet.objects.all()
-    serializer_class = serializers.TicketViewSetSerializer
-    filterset_class = filters.TicketViewSetFilter
+    queryset = models.Ticket.objects.all()
+    serializer_class = serializers.TicketSerializer
+    filterset_class = filters.TicketFilter
     permission_classes = [IsAuthenticated]
 
 
 class SeatMapViewSet(viewsets.ModelViewSet):
-    queryset = models.SeatMapViewSet.objects.all()
-    serializer_class = serializers.SeatMapViewSetSerializer
-    filterset_class = filters.SeatMapViewSetFilter
+    queryset = models.SeatMap.objects.all()
+    serializer_class = serializers.SeatMapSerializer
+    filterset_class = filters.SeatMapFilter
     permission_classes = [IsAuthenticated]
