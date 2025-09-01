@@ -1,17 +1,23 @@
-
-from django.contrib import admin
-from django.urls import path, include
-from django.http import HttpResponse
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
+from rest_framework import routers
+from core import viewsets
 
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
-    # path('core/', include('core.urls')),
-    path('auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('auth/token/refresh/', TokenRefreshView.as_view(), name='toke_refresh'),
-]
+
+router = routers.DefaultRouter()
+router.register('customer', viewsets.CustomerViewSet)
+router.register('PaymentMethod', viewsets.PaymentMethodViewSet)
+router.register('Genre', viewsets.GenreViewSet)
+router.register('Movie', viewsets.MovieViewSet)
+router.register('MovieGenre', viewsets.MovieGenreViewSet)
+router.register('Room', viewsets.RoomViewSet)
+router.register('Session', viewsets.SessionViewSet)
+router.register('Purchase', viewsets.PurchaseViewSet)
+router.register('Ticket', viewsets.TicketViewSet)
+router.register('SeatMap', viewsets.SeatMapViewSet)
+router.register('RoomMap', viewsets.RoomMapViewSet)
+
+
+urlpatterns = router.urls
+
+
+
